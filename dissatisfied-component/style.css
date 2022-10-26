@@ -7,10 +7,17 @@ p {
   color:red;
 }
 
+img {
+  width:50px;
+  height: 50px;
+}
+
 .dis-container {
   width: 75vw;
   height: 75vh;
   background-color: yellowgreen;
+  display: flex;
+  flex-direction: column;
 }
 
 .info {
@@ -21,6 +28,12 @@ p {
 
 .simil-material {
   height: 20px;
+}
+
+#submit {
+  display: flex;
+  position: relative;
+  /* bottom: 0; */
 }
 
 input {
