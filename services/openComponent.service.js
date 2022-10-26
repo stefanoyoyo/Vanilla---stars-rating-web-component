@@ -26,6 +26,18 @@ export class OpenComponentService {
   }
 
   // #endregion
+
+  // #region close components
+
+  async closeComponent(componentId) {
+    if (componentId == null) return; 
+    const component = document.getElementById(componentId);
+    component.innerHTML = '';
+
+    return component.innerHTML;
+  }
+
+  // #endregion 
 }
 
 

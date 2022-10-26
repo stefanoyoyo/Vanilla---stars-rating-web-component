@@ -62,8 +62,9 @@ export class RatingComponent {
         if (index === 0) componentView = await this.openComponent.open('dissatisFieldForm');
         if (index === 3) componentView = await this.openComponent.open('satisfiedField');
         if (index === 4) componentView = await this.openComponent.open('satisfiedField');
-        console.log('componentView')
-        console.log(componentView)
+        if (index === 1 || index === 2) {
+          componentView = await this.openComponent.closeComponent('rating-option-result');
+        }
         const ratingResult = document.getElementById('rating-option-result');
         ratingResult.innerHTML = componentView;
       });
