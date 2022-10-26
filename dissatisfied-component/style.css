@@ -15,7 +15,7 @@ img {
 .dis-container {
   width: 75%;
   height: 100%;
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
   display: flex;
   flex-direction: column;
 }
@@ -49,6 +49,13 @@ input {
   margin: 1em;
 }
 
+#review {
+  width:100%; 
+  height: 30em;
+  margin:1em;
+  width: calc(100% - 2em);
+}
+
 #email {
   margin-right: 0.5em;
   width: calc(100% - 1em);
@@ -72,5 +79,9 @@ button {
   width: 100%;
   height: 50px;
   padding: 1em;
+  margin: 1em;
+}
+
+.text {
   margin: 1em;
 }
