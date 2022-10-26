@@ -7,3 +7,18 @@
 p {
   color: blue;
 }
+
+.info {
+  display: flex;
+  flex-direction: row;
+  row-gap: 1em;
+}
+
+.simil-material {
+  height: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}

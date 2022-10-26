@@ -8,3 +8,13 @@ p {
   height: 75vh;
   background-color: yellowgreen;
 }
+
+.info {
+  display: flex;
+  flex-direction: row;
+  row-gap: 1em;
+}
+
+.simil-material {
+  height: 20px;
+}
