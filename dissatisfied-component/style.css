@@ -13,8 +13,8 @@ img {
 }
 
 .dis-container {
-  width: 75vw;
-  height: 75vh;
+  width: 75%;
+  height: 100%;
   background-color: yellowgreen;
   display: flex;
   flex-direction: column;
