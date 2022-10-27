@@ -19,7 +19,6 @@ export class DissatisfiedComponent {
   listenEmailSend() {
     const component = document.getElementById('email-send');
     component.addEventListener('click', () => {
-      /**CAPIRE PERCHè NON FUNZIONA IL CLICK */
       console.log('email send clicked')
     });
   }
