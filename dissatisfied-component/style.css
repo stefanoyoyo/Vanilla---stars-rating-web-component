@@ -53,6 +53,7 @@ input {
   margin:1em;
   width: calc(100% - 2em);
   resize: none;
+  min-height: 5em;
 }
 
 #email {
