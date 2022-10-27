@@ -31,7 +31,8 @@ p {
 .sat-button {
   display: flex;
   flex-direction: row;
-  justify-self: start;
+  justify-content: start;
+  width: 320px;
 }
 
 .sat-icon {
