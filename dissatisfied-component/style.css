@@ -16,7 +16,7 @@ img {
   /* width: 75%;
   height: 100%; */
   width: 75vw;
-  height: 75vh;
+  height: auto;;
   min-height: 520px;
   background-color: aqua;
   display: flex;
@@ -58,6 +58,7 @@ input {
   width: calc(100% - 2em);
   resize: none;
   min-height: 5em;
+  max-height: 6em ;
 }
 
 #email {
