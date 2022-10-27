@@ -23,9 +23,15 @@ p {
   flex-direction: column;
 }
 
-img {
-  width: 100px;
-  height:  100px;
+.sat-img {
+  width: 24px;
+  height:  24px;
+}
+
+.sat-button {
+  display: flex;
+  flex-direction: row;
+  justify-self: start;
 }
 
 .sat-icon {
