@@ -16,7 +16,7 @@ img {
   /* width: 75%;
   height: 100%; */
   width: 75vw;
-  height: auto;;
+  height: 75vh;
   min-height: 520px;
   background-color: aqua;
   display: flex;
