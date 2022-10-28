@@ -33,7 +33,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: start;
-  width: 320px;
+  width: calc(100% - 2em);
 }
 
 .sat-icon {
