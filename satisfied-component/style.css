@@ -5,6 +5,10 @@
   background-color: pink;
 }
 
+.video-testimonial-container {
+
+}
+
 p {
   color: blue;
 }
@@ -27,6 +31,7 @@ p {
 .sat-img {
   width: 24px;
   height:  24px;
+  margin-right: 1em;
 }
 
 .sat-button {
