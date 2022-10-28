@@ -1,3 +1,5 @@
+import { TestimonialComponent } from './video-testimonial/testimonial.js';
+
 export class SatisfiedComponent {
   /**Method to get the this component html's code */
   async getComponent() {
@@ -36,8 +38,10 @@ export class SatisfiedComponent {
       console.err('Component not yet in DOM');
       return;
     }
-    component.addEventListener('click', ()=> {
-      console.log('**YET TO DO**');
+    component.addEventListener('click', async ()=> {
+      const testimonialElement = document.getElementById('video-testimonial-container');
+      const testimonial = new TestimonialComponent();
+      testimonialElement.innerHTML = await testimonial.getComponent(); 
     });
   }
 
