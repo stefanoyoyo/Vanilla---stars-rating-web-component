@@ -11,10 +11,7 @@
   background-color: grey;
 }
 
-#sat-test-google-button, #sat-test-video-testimonial-button {
-  color:white;
-}
-
-#sat-test-video-testimonial-button {
+.sat-test-button {
   width: auto;
+  color:white;
 }
