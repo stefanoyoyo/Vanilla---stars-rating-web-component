@@ -40,6 +40,8 @@ export class SatisfiedComponent {
     }
     component.addEventListener('click', async ()=> {
       const testimonialElement = document.getElementById('video-testimonial-container');
+      testimonialElement.style.display = 'block'; 
+      // testimonialElement.style.background = 'rgba(0,0,0,0.5)'; 
       const testimonial = new TestimonialComponent();
       testimonialElement.innerHTML = await testimonial.getComponent(); 
     });
