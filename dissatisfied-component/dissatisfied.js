@@ -1,3 +1,6 @@
+import { EmailService } from '../services/email.service.js';
+ 
+
 export class DissatisfiedComponent {
   /**Method to get the this component html's code */
   async getComponent() {
@@ -22,16 +25,19 @@ export class DissatisfiedComponent {
       console.log('email send clicked');
       const data = this.getFormData();
       console.log(data)
+      const emailService = new EmailService();
+      emailService.sendEmail(data.email, `Complaint from ${data.email} - having telephone : ${data.telehone}`, data.review);
+
     });
   }
 
   // #region get form data 
 
   getFormData() {
-    const name = document.getElementById('name')?.innerHtml;
-    const email = document.getElementById('email')?.innerHtml;
-    const telehone = document.getElementById('telephone')?.innerHtml;
-    const review = document.getElementById('review')?.innerHtml;
+    const name = document.getElementById('name')?.value;
+    const email = document.getElementById('email')?.value;
+    const telehone = document.getElementById('telephone')?.value;
+    const review = document.getElementById('review')?.value;
 
     return {
       name: name,
