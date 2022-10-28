@@ -5,8 +5,12 @@
   background-color: pink;
 }
 
-.video-testimonial-container {
-
+#video-testimonial-container {  
+  width: 75vw;
+  height: 75vh;
+  min-height: 520px;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
 }
 
 p {
