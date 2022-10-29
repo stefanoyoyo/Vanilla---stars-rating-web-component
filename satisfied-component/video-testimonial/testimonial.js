@@ -17,8 +17,7 @@ export class TestimonialComponent {
       const component = document.getElementById('sat-test-buttons');
       if (component == null) return;
       document.addEventListener('click', (event) => {
-        if(!component.contains( event.target))
-        console.log('fire close dialog')
+        if(component.contains( event.target)) return;
         // when click out of the box => hide it
         const container = document.getElementById('video-testimonial-container');
         if (container == null) return;
