@@ -19,7 +19,7 @@ export class TestimonialComponent {
       document.addEventListener('click', (event) => {
         if(!component.contains( event.target))
         console.log('fire')
-        console.log(event)
+        // when click out of the box => hide it
         const container = document.getElementsByClassName('sat-testimonial-container');
         if (container == null) return;
         container[0].style.display='none';
