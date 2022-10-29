@@ -34,7 +34,6 @@ export class SatisfiedComponent {
   
   listenGoToTestimonials() {
     const component = document.getElementById('video-testimonial-button');
-    console.log('open dialog')
     if(component == null) {
       console.log('Component not yet in DOM');
       return;
