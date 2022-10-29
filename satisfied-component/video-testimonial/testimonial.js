@@ -16,10 +16,13 @@ export class TestimonialComponent {
     listenButtonsClick() {
       const component = document.getElementById('sat-test-buttons');
       if (component == null) return;
-      component.addEventListener('click', (event) => {
-        // if(event.target)
-        console.log('event')
+      document.addEventListener('click', (event) => {
+        if(!component.contains( event.target))
+        console.log('fire')
         console.log(event)
+        const container = document.getElementById('sat-testimonial-container');
+        if (container == null) return;
+        container.innerHtml = '';
       });
     }
 
