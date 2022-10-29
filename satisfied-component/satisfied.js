@@ -40,7 +40,6 @@ export class SatisfiedComponent {
     }
     component.addEventListener('click', async ()=> {
       const testimonialElement = document.getElementById('video-testimonial-container');
-      // testimonialElement.style.display = 'block'; 
       const testimonial = new TestimonialComponent();
       testimonialElement.innerHTML = await testimonial.getComponent(); 
       testimonialElement.style.display = 'block';
