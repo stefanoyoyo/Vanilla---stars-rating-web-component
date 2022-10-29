@@ -22,8 +22,8 @@ export class TestimonialComponent {
         // when click out of the box => hide it
         const container = document.getElementsByClassName('sat-testimonial-container');
         if (container == null) return;
-        //container[0].style.display='none';
-        container[0].style.visibility = 'collapse';
+        container[0].style.display='none';
+        //container[0].style.visibility = 'collapse';
       });
     }
 
