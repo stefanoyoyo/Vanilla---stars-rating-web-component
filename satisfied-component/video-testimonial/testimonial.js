@@ -20,9 +20,9 @@ export class TestimonialComponent {
         if(!component.contains( event.target))
         console.log('fire')
         console.log(event)
-        const container = document.getElementById('sat-testimonial-container');
+        const container = document.getElementsByClassName('sat-testimonial-container');
         if (container == null) return;
-        container.innerHtml = '';
+        container[0].style.display='none';
       });
     }
 
