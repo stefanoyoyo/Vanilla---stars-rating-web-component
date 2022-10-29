@@ -3,11 +3,11 @@ export class TestimonialComponent {
     /**Method to get the this component html's code */
     async getComponent() {
       const html = await (await fetch('./satisfied-component/video-testimonial/testimonial.html')).text();
-      this.onInit();
+      await this.onInit();
       return html;
     }
 
-    onInit() {
+    async onInit() {
       setTimeout(() => {
         this.listenButtonsClick();
       }, 0)
