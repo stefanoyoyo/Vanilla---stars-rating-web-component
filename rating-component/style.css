@@ -1,8 +1,11 @@
 /** Variables */
 
 :root {
-  --star-background-color-hover: rgb(39, 204, 137);
-  --star-background-color-clicked: rgb(39, 204, 137);
+  /* --star-background-color-hover: rgb(39, 204, 137);
+  --star-background-color-clicked: rgb(39, 204, 137); */
+
+  --star-background-color-hover: #deb456;
+  --star-background-color-clicked: #deb456;
 }
 
 .page {

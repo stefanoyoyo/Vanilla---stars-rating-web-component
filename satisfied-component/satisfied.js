@@ -28,7 +28,7 @@ export class SatisfiedComponent {
     }
     component.addEventListener('click', ()=> {
       console.log('fire go to google');
-      window.open('https://www.google.com/search?hl=it-IT&gl=it&q=Zen+Home+Shop,+Via+Euclide,+7,+21050+Lonate+Ceppino+VA&ludocid=17644751623097458454&lsig=AB86z5Wdr3MGc69N2WM60BQu03Ny#lrd=0x478688a63893ffff:0xf4dec01d84b89f16,3')
+      window.open('https://www.google.com/search?hl=it-IT&gl=it&q=Zen+Home+Shop,+Via+Euclide,+7,+21050+Lonate+Ceppino+VA&ludocid=17644751623097458454&lsig=AB86z5Wdr3MGc69N2WM60BQu03Ny#lrd=0x478688a63893ffff:0xf4dec01d84b89f16,3');
     });
   }
   
