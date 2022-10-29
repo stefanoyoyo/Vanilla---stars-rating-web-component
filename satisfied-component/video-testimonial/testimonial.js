@@ -9,20 +9,20 @@ export class TestimonialComponent {
 
     async onInit() {
       setTimeout(() => {
-        this.listenButtonsClick();
+        this.listenButtonsDialogClose();
       }, 0)
     }
 
-    listenButtonsClick() {
+    listenButtonsDialogClose() {
       const component = document.getElementById('sat-test-buttons');
       if (component == null) return;
       document.addEventListener('click', (event) => {
         if(!component.contains( event.target))
-        console.log('fire')
+        console.log('fire close dialog')
         // when click out of the box => hide it
-        const container = document.getElementsByClassName('sat-testimonial-container');
+        const container = document.getElementById('video-testimonial-container');
         if (container == null) return;
-        container[0].style.display='none';
+        container.style.display='none';
       });
     }
 
