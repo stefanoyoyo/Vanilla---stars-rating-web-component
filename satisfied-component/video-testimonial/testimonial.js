@@ -23,7 +23,6 @@ export class TestimonialComponent {
         const container = document.getElementsByClassName('sat-testimonial-container');
         if (container == null) return;
         container[0].style.display='none';
-        //container[0].style.visibility = 'collapse';
       });
     }
 
