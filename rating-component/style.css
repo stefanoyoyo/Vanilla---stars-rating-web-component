@@ -6,6 +6,14 @@
   --star-background-color-clicked: #deb456;
 }
 
+#rating-component {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .page {
   width: 100vw;
   height: 100vh;
