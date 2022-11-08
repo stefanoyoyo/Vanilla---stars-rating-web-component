@@ -57,7 +57,6 @@ export class RatingComponent {
     if (DOMelements == null) return;
     DOMelements.forEach((node, index) => {
       node.addEventListener('click', async () => {
-        console.log(index)
         let componentView = ''; 
         if (index === 0) componentView = await this.openDissatisfiedForm();
         if (index === 3) componentView = await this.openSatisfiedForm();
@@ -162,8 +161,6 @@ export class RatingComponent {
     //Nascondo / visualizzo le stelline
     ratingStars.style.display = config?.raring?.style?.display;
     ratingUnderText.style.display = config?.text?.style?.display;
-    console.log('config?.raring?.style?.display')
-    console.log(config?.raring?.style?.display)
   }
 
   // #region start satisfied dissatisfied forms 
