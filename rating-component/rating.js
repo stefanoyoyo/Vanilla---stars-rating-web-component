@@ -63,11 +63,24 @@ export class RatingComponent {
         if (index === 3) componentView = await this.openSatisfiedForm();
         if (index === 4) componentView = await this.openSatisfiedForm();
         if (index === 1 || index === 2) {
-          componentView = '';
+          componentView = this.manageNeutralChoices();
         }
         document.getElementById('rating-result').innerHTML = componentView;
       });
     })
+  }
+
+  manageNeutralChoices() {
+    const config = {
+      text: {
+        style: {
+          display: 'none'
+        }
+      }
+    };
+    setTimeout(() => { this.configurateComponent(config); }, 0);
+    
+    return '';
   }
 
   async openDissatisfiedForm () {
@@ -82,6 +95,7 @@ export class RatingComponent {
         textAboveStarts: '',
         textUnderStars: "Desideriamo che i nostri clienti siano soddisfatti al 100%. Per favore, facci sapere perche' hai avuto un'esperienza negativa, in modo da poter migliorare il nostro servizio.",
         style: {
+          display: 'flex',
           fontSize: '14px',
           fontFamily: 'Inter,Helvetica,Arial,sans-serif',
           fontWeight: 400,
@@ -111,6 +125,7 @@ export class RatingComponent {
         textAboveStarts: '',
         textUnderStars: 'Lasciaci una recensione, ci aiuterà crescere e a servire meglio i nostri clienti come te.',
         style: {
+          display: 'flex',
           fontSize: '18px'
         }
       },
@@ -134,18 +149,21 @@ export class RatingComponent {
     const ratingAboveText = document.getElementById('rating-text-above-id'); 
     const ratingUnderText = document.getElementById('rating-text-under-id'); 
     const ratingStars = document.getElementById('rating-stars');
-    ratingLogo.style.width = config.logo.style.width;
-    ratingLogo.style.height = config.logo.style.height;
+    ratingLogo.style.width = config?.logo?.style?.width;
+    ratingLogo.style.height = config?.logo?.style?.height;
     // Cambio il testo e stile del testo
-    ratingAboveText.innerHTML = config.text.textAboveStarts ?? ratingAboveText.innerHTML; 
-    ratingUnderText.innerHTML = config.text.textUnderStars ?? ratingUnderText.innerHTML; 
-    ratingUnderText.style.fontSize = config.text.style.fontSize;
-    ratingUnderText.style.fontFamily = config.text.style.fontFamily;
-    ratingUnderText.style.fontWeight = config.text.style.fontWeight;
-    ratingUnderText.style.lineHeight = config.text.style.lineHeight;
-    ratingUnderText.style.letterSpacing = config.text.style.letterSpacing;
+    ratingAboveText.innerHTML = config?.text?.textAboveStarts ?? ratingAboveText.innerHTML; 
+    ratingUnderText.innerHTML = config?.text?.textUnderStars ?? ratingUnderText.innerHTML; 
+    ratingUnderText.style.fontSize = config?.text?.style?.fontSize;
+    ratingUnderText.style.fontFamily = config?.text?.style?.fontFamily;
+    ratingUnderText.style.fontWeight = config?.text?.style?.fontWeight;
+    ratingUnderText.style.lineHeight = config?.text?.style?.lineHeight;
+    ratingUnderText.style.letterSpacing = config?.text?.style.letterSpacing;
     //Nascondo / visualizzo le stelline
-    ratingStars.style.display = config.raring.style.display;
+    ratingStars.style.display = config?.raring?.style?.display;
+    ratingUnderText.style.display = config?.text?.style?.display;
+    console.log('config?.raring?.style?.display')
+    console.log(config?.raring?.style?.display)
   }
 
   // #region start satisfied dissatisfied forms 
