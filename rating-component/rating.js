@@ -75,8 +75,6 @@ export class RatingComponent {
   }
 
   async openDissatisfiedForm () {
-    // document.getElementById('rating-component').style.width = '10%'
-    // document.getElementById('rating-component').style.heigth = '10%'
     const config = {
       logo: {
         style: {
@@ -85,7 +83,6 @@ export class RatingComponent {
         }
       },
       text: {
-        //innerText: 'Lasciaci una recensione, ci aiuterà crescere e a servire meglio i nostri clienti come te.',
         style: {
           fontSize: '18px'
         }
@@ -108,6 +105,25 @@ export class RatingComponent {
   }
 
   async openSatisfiedForm() {
+    const config = {
+      logo: {
+        style: {
+          width : '10%',
+          height : '10%'
+        }
+      },
+      text: {
+        innerText: 'Lasciaci una recensione, ci aiuterà crescere e a servire meglio i nostri clienti come te.',
+        style: {
+          fontSize: '18px'
+        }
+      },
+      raring: {
+        style: {
+          display: 'none',
+        }
+      }
+    };
     document.getElementById('rating-component').style.display = 'none';
     return this.openComponent.open('satisfiedField');
   }
