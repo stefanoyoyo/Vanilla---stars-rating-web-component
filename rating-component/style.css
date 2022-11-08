@@ -24,7 +24,7 @@
 }
 
 #rating-text-under-container {
-  width: 500px;
+  width: calc(75vw - 2em);
 }
 
 #rating-text-above-id {
