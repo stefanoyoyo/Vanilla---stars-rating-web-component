@@ -93,13 +93,7 @@ export class RatingComponent {
         }
       }
     };
-    // Ridimensiono logo e testo
-    const ratingLogo = document.getElementById('rating-logo'); 
-    const ratingText = document.getElementById('rating-text-id'); 
-    ratingLogo.style = config.logo.style;
-    // Cambio il testo e stile del testo
-    ratingText.innerText = config.text.innerText ?? ratingText.innerText; 
-    // ratingText.style.fontSize = config.text.style.fontSize;
+    this.configurateComponent(config);
 
     return this.openComponent.open('dissatisFieldForm')
   }
@@ -113,7 +107,8 @@ export class RatingComponent {
         }
       },
       text: {
-        innerText: 'Lasciaci una recensione, ci aiuterà crescere e a servire meglio i nostri clienti come te.',
+        textOnStarts: 'Lasciaci una recensione, ci aiuterà crescere e a servire meglio i nostri clienti come te.',
+        textUnderStars: '',
         style: {
           fontSize: '18px'
         }
@@ -128,6 +123,18 @@ export class RatingComponent {
     return this.openComponent.open('satisfiedField');
   }
   // #endregion
+
+  configurateComponent(config = null) {
+    if (config == null) return;
+    // Ridimensiono logo e testo
+    const ratingLogo = document.getElementById('rating-logo'); 
+    const ratingText = document.getElementById('rating-text-id'); 
+    ratingLogo.style.width = config.logo.style.width;
+    ratingLogo.style.height = config.logo.style.height;
+    // Cambio il testo e stile del testo
+    ratingText.textOnStarts = config.text.textOnStarts ?? ratingText.textOnStarts; 
+    // ratingText.style.fontSize = config.text.style.fontSize;
+  }
 
   // #region start satisfied dissatisfied forms 
 
