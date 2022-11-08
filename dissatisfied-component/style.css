@@ -18,8 +18,8 @@ img {
   /* height: 75vh; */
   width: 75vw;
   height: auto;
-  min-height: 520px;
-  background-color: aqua;
+  min-height: 470px;
+  /* background-color: aqua; */
   display: flex;
   flex-direction: column;
 }
@@ -36,7 +36,7 @@ img {
 
 .submit-options {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .submit-options, button {
@@ -58,7 +58,7 @@ input {
   margin:1em;
   width: calc(100% - 2em);
   resize: none;
-  min-height: 5em;
+  min-height: 220px;
   max-height: 6em ;
 }
 

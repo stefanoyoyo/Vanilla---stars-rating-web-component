@@ -86,7 +86,11 @@ export class RatingComponent {
         textOnStarts: '',
         textUnderStars: "Desideriamo che i nostri clienti siano soddisfatti al 100%. Per favore, facci sapere perche' hai avuto un'esperienza negativa, in modo da poter migliorare il nostro servizio.",
         style: {
-          fontSize: '18px'
+          fontSize: '14px',
+          fontFamily: 'Inter,Helvetica,Arial,sans-serif',
+          fontWeight: 400,
+          lineHeight: '17px',
+          letterSpacing: '0.00938em'
         }
       },
       raring: {
@@ -109,8 +113,8 @@ export class RatingComponent {
         }
       },
       text: {
-        textOnStarts: 'Lasciaci una recensione, ci aiuterà crescere e a servire meglio i nostri clienti come te.',
-        textUnderStars: '',
+        textAboveStarts: '',
+        textUnderStars: 'Lasciaci una recensione, ci aiuterà crescere e a servire meglio i nostri clienti come te.',
         style: {
           fontSize: '18px'
         }
@@ -121,22 +125,29 @@ export class RatingComponent {
         }
       }
     };
-    document.getElementById('rating-component').style.display = 'none';
+    // document.getElementById('rating-component').style.display = 'none';
+    this.configurateComponent(config);
     return this.openComponent.open('satisfiedField');
   }
   // #endregion
 
+  /**Method to apply the specified style to the elements of this component */
   configurateComponent(config = null) {
     if (config == null) return;
     // Ridimensiono logo e testo
     const ratingLogo = document.getElementById('rating-logo'); 
-    const ratingText = document.getElementById('rating-text-above-id'); 
+    const ratingAboveText = document.getElementById('rating-text-above-id'); 
+    const ratingUnderText = document.getElementById('rating-text-under-id'); 
     ratingLogo.style.width = config.logo.style.width;
     ratingLogo.style.height = config.logo.style.height;
     // Cambio il testo e stile del testo
-    ratingText.textOnStarts = config.text.textOnStarts ?? ratingText.textOnStarts; 
-    ratingText.textUnderStars = config.text.textUnderStars ?? ratingText.textUnderStars; 
-    // ratingText.style.fontSize = config.text.style.fontSize;
+    ratingAboveText.innerHTML = config.text.textOnStarts ?? ratingText.textOnStarts; 
+    ratingUnderText.innerHTML = config.text.textUnderStars ?? ratingText.textUnderStars; 
+    ratingUnderText.style.fontSize = config.text.style.fontSize;
+    ratingUnderText.style.fontFamily = config.text.style.fontFamily;
+    ratingUnderText.style.fontWeight = config.text.style.fontWeight;
+    ratingUnderText.style.lineHeight = config.text.style.lineHeight;
+    ratingUnderText.style.letterSpacing = config.text.style.letterSpacing;
   }
 
   // #region start satisfied dissatisfied forms 
