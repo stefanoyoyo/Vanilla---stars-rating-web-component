@@ -74,8 +74,8 @@ export class RatingComponent {
     const config = {
       logo: {
         style: {
-          width : '10%',
-          height : '10%'
+          width : '100px',
+          height : '100px'
         }
       },
       text: {
@@ -104,8 +104,8 @@ export class RatingComponent {
     const config = {
       logo: {
         style: {
-          width : '10%',
-          height : '10%'
+          width : '100px',
+          height : '100px'
         }
       },
       text: {
