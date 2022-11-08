@@ -83,6 +83,8 @@ export class RatingComponent {
         }
       },
       text: {
+        textOnStarts: '',
+        textUnderStars: "Desideriamo che i nostri clienti siano soddisfatti al 100%. Per favore, facci sapere perche' hai avuto un'esperienza negativa, in modo da poter migliorare il nostro servizio.",
         style: {
           fontSize: '18px'
         }
@@ -128,11 +130,12 @@ export class RatingComponent {
     if (config == null) return;
     // Ridimensiono logo e testo
     const ratingLogo = document.getElementById('rating-logo'); 
-    const ratingText = document.getElementById('rating-text-id'); 
+    const ratingText = document.getElementById('rating-text-above-id'); 
     ratingLogo.style.width = config.logo.style.width;
     ratingLogo.style.height = config.logo.style.height;
     // Cambio il testo e stile del testo
     ratingText.textOnStarts = config.text.textOnStarts ?? ratingText.textOnStarts; 
+    ratingText.textUnderStars = config.text.textUnderStars ?? ratingText.textUnderStars; 
     // ratingText.style.fontSize = config.text.style.fontSize;
   }
 
