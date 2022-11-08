@@ -85,7 +85,7 @@ export class RatingComponent {
         }
       },
       text: {
-        content: 'Lasciaci una recensione, ci aiuterà crescere e a servire meglio i nostri clienti come te.',
+        //innerText: 'Lasciaci una recensione, ci aiuterà crescere e a servire meglio i nostri clienti come te.',
         style: {
           fontSize: '18px'
         }
@@ -99,11 +99,10 @@ export class RatingComponent {
     // Ridimensiono logo e testo
     const ratingLogo = document.getElementById('rating-logo'); 
     const ratingText = document.getElementById('rating-text-id'); 
-    ratingLogo.style.width = config.logo.style.width;
-    ratingLogo.style.height = config.logo.style.height;
+    ratingLogo.style = config.logo.style;
     // Cambio il testo e stile del testo
-    ratingText.innerText = config.text.content; 
-    ratingText.style.fontSize = config.text.style.fontSize;
+    ratingText.innerText = config.text.innerText ?? ratingText.innerText; 
+    // ratingText.style.fontSize = config.text.style.fontSize;
 
     return this.openComponent.open('dissatisFieldForm')
   }
