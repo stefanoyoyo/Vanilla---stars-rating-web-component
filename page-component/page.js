@@ -9,7 +9,7 @@ export class PageComponent {
 
     /**Method to get the this component html's code */
     async getComponent() {
-      console.log('rating works');
+      console.log('page works');
       const html = await (await fetch('./page-component/page.html')).text();
       await this.onInit();
   
