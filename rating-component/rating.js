@@ -78,8 +78,33 @@ export class RatingComponent {
     // document.getElementById('rating-component').style.width = '10%'
     // document.getElementById('rating-component').style.heigth = '10%'
     const config = {
-      
+      logo: {
+        style: {
+          width : '10%',
+          height : '10%'
+        }
+      },
+      text: {
+        content: 'Lasciaci una recensione, ci aiuterà crescere e a servire meglio i nostri clienti come te.',
+        style: {
+          fontSize: '18px'
+        }
+      },
+      raring: {
+        style: {
+          display: 'none',
+        }
+      }
     };
+    // Ridimensiono logo e testo
+    const ratingLogo = document.getElementById('rating-logo'); 
+    const ratingText = document.getElementById('rating-text-id'); 
+    ratingLogo.style.width = config.logo.style.width;
+    ratingLogo.style.height = config.logo.style.height;
+    // Cambio il testo e stile del testo
+    ratingText.innerText = config.text.content; 
+    ratingText.style.fontSize = config.text.style.fontSize;
+
     return this.openComponent.open('dissatisFieldForm')
   }
 
