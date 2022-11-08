@@ -27,7 +27,6 @@ export class DissatisfiedComponent {
       console.log(data)
       const emailService = new EmailService();
       emailService.sendEmail(data.email, `Complaint from ${data.email} - having telephone : ${data.telehone}`, data.review);
-
     });
   }
 

@@ -1,11 +1,14 @@
 import {SatisfiedComponent} from '../satisfied-component/satisfied.js';
 import {DissatisfiedComponent} from '../dissatisfied-component/dissatisfied.js';
+import {RatingComponent} from '../rating-component/rating.js';
 
 export class OpenComponentService {
 
   async open(componentName) {
     if (componentName == null) return null;
     switch(componentName) {
+      case 'ratingComponent': 
+        return await this.getRatingComponent();
       case 'dissatisFieldForm': 
         return await this.dissatisFieldForm();          
       case 'satisfiedField': 
@@ -14,6 +17,11 @@ export class OpenComponentService {
   }
 
   // #region open components 
+
+  async getRatingComponent() {
+    const rating = new RatingComponent();
+    return await rating.getComponent();
+  }
 
   async dissatisFieldForm() {
     const dissatisfied = new DissatisfiedComponent();

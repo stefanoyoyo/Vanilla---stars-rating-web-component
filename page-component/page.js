@@ -11,8 +11,13 @@ export class PageComponent {
     async getComponent() {
       console.log('rating works');
       const html = await (await fetch('./page-component/page.html')).text();
-      // await this.onInit();
+      await this.onInit();
   
       return html;
+    }
+
+    async onInit() {
+      const rating = await this.openComponent.open('ratingComponent');
+      setTimeout(() => {document.getElementById('rating-component').innerHTML = rating;}, 0);
     }
 }

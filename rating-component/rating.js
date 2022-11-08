@@ -63,10 +63,13 @@ export class RatingComponent {
         if (index === 3) componentView = await this.openSatisfiedForm();
         if (index === 4) componentView = await this.openSatisfiedForm();
         if (index === 1 || index === 2) {
-          componentView = await this.openComponent.closeComponent('rating-option-result');
+          // componentView = await this.openComponent.closeComponent('rating-option-result');
+          componentView = '';
         }
-        const ratingResult = document.getElementById('rating-option-result');
-        ratingResult.innerHTML = componentView;
+        // console.log(componentView)
+        // const ratingResult = document.getElementById('rating-option-result');
+        // ratingResult.innerHTML = componentView;
+        document.getElementById('rating-result').innerHTML = componentView;
       });
     })
   }
