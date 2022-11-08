@@ -83,7 +83,7 @@ export class RatingComponent {
         }
       },
       text: {
-        textOnStarts: '',
+        textAboveStarts: '',
         textUnderStars: "Desideriamo che i nostri clienti siano soddisfatti al 100%. Per favore, facci sapere perche' hai avuto un'esperienza negativa, in modo da poter migliorare il nostro servizio.",
         style: {
           fontSize: '14px',
@@ -141,8 +141,8 @@ export class RatingComponent {
     ratingLogo.style.width = config.logo.style.width;
     ratingLogo.style.height = config.logo.style.height;
     // Cambio il testo e stile del testo
-    ratingAboveText.innerHTML = config.text.textOnStarts ?? ratingText.textOnStarts; 
-    ratingUnderText.innerHTML = config.text.textUnderStars ?? ratingText.textUnderStars; 
+    ratingAboveText.innerHTML = config.text.textAboveStarts ?? ratingAboveText.innerHTML; 
+    ratingUnderText.innerHTML = config.text.textUnderStars ?? ratingUnderText.innerHTML; 
     ratingUnderText.style.fontSize = config.text.style.fontSize;
     ratingUnderText.style.fontFamily = config.text.style.fontFamily;
     ratingUnderText.style.fontWeight = config.text.style.fontWeight;
