@@ -59,7 +59,7 @@ export class RatingComponent {
       node.addEventListener('click', async () => {
         console.log(index)
         let componentView = ''; 
-        if (index === 0) componentView = await this.openComponent.open('dissatisFieldForm');
+        if (index === 0) componentView = await this.openDissatisfiedForm();
         if (index === 3) componentView = await this.openSatisfiedForm();
         if (index === 4) componentView = await this.openSatisfiedForm();
         if (index === 1 || index === 2) {
@@ -69,6 +69,10 @@ export class RatingComponent {
         ratingResult.innerHTML = componentView;
       });
     })
+  }
+
+  async openDissatisfiedForm () {
+    return this.openComponent.open('dissatisFieldForm')
   }
 
   async openSatisfiedForm() {
