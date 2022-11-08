@@ -23,7 +23,10 @@
   text-align: center;
 }
 
-<style>
+#initial-text {
+  font-size: 30px; white-space: pre-line; word-break: break-word;
+}
+
 .MuiTypography-root {
   margin: 0;
 }
