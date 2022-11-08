@@ -1,7 +1,6 @@
 export default class EmailViaAPI {
 
   api_config = `{
-    "host": "https://api.sendgrid.com/v3/",
     "keyId": "dK3ieZq0RUiPs451CLChKg",
     "headers" : {
       "Authorization": "Bearer dK3ieZq0RUiPs451CLChKg",
@@ -13,11 +12,11 @@ export default class EmailViaAPI {
       {
         "to":[
           {
-            "email":"john.doe@example.com",
+            "email":"xcwomi@telegmail.com",
             "name":"John Doe"
           }
         ],
-        "subject":"Hello, World!"
+        "subject":"Hello, World from email API!"
       }],
         "content": [
           {
@@ -26,11 +25,11 @@ export default class EmailViaAPI {
           }
         ],
         "from": {
-          "email":"sam.smith@example.com",
+          "email":"smtp.stefano@outlook.it",
           "name":"Sam Smith"
         },
         "reply_to": {
-          "email":"sam.smith@example.com",
+          "email":"smtp.stefano@outlook.it",
           "name":"Sam Smith"
         }
       }
@@ -54,7 +53,10 @@ export default class EmailViaAPI {
   // Example POST method implementation:
   // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
   async postData(url = '', headers = {}, data = {}) {
-    // Default options are marked with *
+    // method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    // url: '/v3/mail/send',
+    // headers,
+    // body: data
     const response = await fetch(url, {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
