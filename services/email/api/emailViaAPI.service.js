@@ -44,7 +44,8 @@ export default class EmailViaAPI {
     console.log(this.API_CONFIG);
     
     this.postData(
-      this.API_CONFIG.url, 
+      // this.API_CONFIG.url, 
+      'http://sendgrid-nodejs-oxailstudiosnode.7e14.starter-us-west-2.openshiftapps.com',
       this.API_CONFIG.headers,
       this.API_CONFIG.data
     );

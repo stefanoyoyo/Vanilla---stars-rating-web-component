@@ -10,4 +10,5 @@ https://docs.sendgrid.com/for-developers/sending-email/api-getting-started
 **Note su sendGrid** 
 Permette l'invio delle mail senza l'uso di un proprio server solo usando 
 usando il dominio "sendgrid.api-docs.io".
- 
+https://stackoverflow.com/questions/29458742/cors-access-control-allow-origin-not-equal-to-supplied-origin
+
