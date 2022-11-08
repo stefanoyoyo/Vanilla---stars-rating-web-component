@@ -1,13 +1,23 @@
+import EmailViaClientApp from './client-app/clientEmail.service.js';
+import EmailViaAPI from './api/emailViaAPI.service.js';
+
+
 export class EmailService {
-  sendEmail(mailto, subject, body, canOpemClientMail) {
-    if (canOpemClientMail == null) canOpemClientMail = true;
+  sendEmail(mailto, subject, body, canOpenClientMail) {
+    if (canOpenClientMail == null) canOpenClientMail = false;
     if (subject == null) return;
     if (body == null) return;
-    if (canOpemClientMail) this.sendEmailUsingClientApp(mailto, subject, body);
+    if (canOpenClientMail) this.sendEmailUsingClientApp(mailto, subject, body);
+    else this.sendEmailViaAPI(mailto, subject, body);
   }
 
   sendEmailUsingClientApp(mailto,subject, body) {
-    const email = `mailto:${mailto}?subject=${subject}&body=${body}`;
-    window.open(email);
+    const emailViaClient = new EmailViaClientApp();
+    emailViaClient.send(mailto, subject, body);
+  }
+
+  sendEmailViaAPI(mailto, subject, body) {
+    const emailViaApi = new EmailViaAPI();
+    emailViaApi.send(mailto, subject, body);
   }
 }
