@@ -72,6 +72,8 @@ export class RatingComponent {
   }
 
   async openDissatisfiedForm () {
+    // document.getElementById('rating-component').style.width = '10%'
+    // document.getElementById('rating-component').style.heigth = '10%'
     return this.openComponent.open('dissatisFieldForm')
   }
 
