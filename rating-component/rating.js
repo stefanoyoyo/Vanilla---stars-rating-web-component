@@ -91,7 +91,6 @@ export class RatingComponent {
       },
       raring: {
         style: {
-          display: 'none',
         }
       }
     };
