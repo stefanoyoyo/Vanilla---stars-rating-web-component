@@ -1,4 +1,4 @@
-import { EmailService } from '../services/email.service.js';
+import { EmailService } from '../services/email/email.service.js';
  
 
 export class DissatisfiedComponent {
