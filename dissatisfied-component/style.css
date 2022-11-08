@@ -53,6 +53,16 @@ input {
   margin: 1em;
 }
 
+input::placeholder {
+  position: relative;
+  left: 3px;
+}
+
+textarea::placeholder {
+  position: relative;
+  left: 3px;
+}
+
 #review {
   height: 30em;
   margin:1em;
